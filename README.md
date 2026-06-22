@@ -3,4 +3,4 @@
 # 1.workflow
 # MD - mark down 
 
-To create a github action workflow you ned a folder called '/.github/workflow'
+To create a github action workflow you ned a folder called '.github/workflow'
