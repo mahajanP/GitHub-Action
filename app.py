@@ -1,5 +1,6 @@
 #created by prakash 
 # update file 
+# install python
 from flask import Flask, render_template
 app = Flask(__name__)
 
