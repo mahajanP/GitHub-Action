@@ -1,0 +1,31 @@
+# Created by Prakash Mahajan
+name: CICD
+
+on:
+  workflow_dispatch: # on button click
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the Code
+        run: echo "Cloning the Code"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build using Docker
+        run: echo "Bulding using Docekr"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running test caces
+        run: echo"Testing the app"
+
+  Dispaly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployng on the machine
+        run: echo "Deploying  the code"
+
