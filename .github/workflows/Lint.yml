@@ -14,7 +14,12 @@ jobs:
    steps:
    # this step will automaticaly clone the code fo the current branch in to the runner
      - name: Checkout/clone the code
-       uses: actions/checkout@v7
+       uses: actions/checkout@runner
+       #install python in action 
+     - name: Set up Python
+       uses: actions/setup-python@v5
+       with:
+         python-version: '3.12' # Specify your preferred version
    # this step will install the linting tool
      - name: Install Linter
        run: pip install ruff
