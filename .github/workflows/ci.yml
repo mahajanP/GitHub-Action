@@ -4,7 +4,7 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
  build-and-push:
@@ -18,7 +18,12 @@ jobs:
          with:
             username: ${{ vars.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
-           
+
+        - name: Docker Build  and Push
+          uses: docker/build=push-action@7
+          with: #extra parameter 
+            push: true
+            tags: ${{ vars.DOCKERHUB_USERNAME }}/devboard-fe-main:latest           
          
        
        
